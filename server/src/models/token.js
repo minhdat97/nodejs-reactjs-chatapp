@@ -10,6 +10,7 @@ export default class Token {
   }
 
   logout(token) {
+    // eslint-disable-next-line no-undef
     return new Promise((resolve, reject) => {
       const tokenId = _.toString(token._id);
       // to remove token from cache
@@ -24,6 +25,7 @@ export default class Token {
     });
   }
   loadTokenAndUser(id) {
+    // eslint-disable-next-line no-undef
     return new Promise((resolve, reject) => {
       this.load(id)
         .then(token => {
@@ -48,6 +50,7 @@ export default class Token {
   load(id = null) {
     id = `${id}`;
 
+    // eslint-disable-next-line no-undef
     return new Promise((resolve, reject) => {
       // first we check in cache if found dont need to query to database.
 
@@ -88,6 +91,7 @@ export default class Token {
       created: new Date()
     };
 
+    // eslint-disable-next-line no-undef
     return new Promise((resolve, reject) => {
       this.app.db.collection("tokens").insertOne(token, (err, info) => {
         return err ? reject(err) : resolve(token);

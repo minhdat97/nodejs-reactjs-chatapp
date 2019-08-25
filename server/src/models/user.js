@@ -14,6 +14,7 @@ export default class User {
   }
 
   updateUserStatus(userId, isOnline = false) {
+    // eslint-disable-next-line no-undef
     return new Promise((resolve, reject) => {
       // first update status of cache this.users
 
@@ -34,6 +35,7 @@ export default class User {
   }
 
   find(query = {}, options = {}) {
+    // eslint-disable-next-line no-undef
     return new Promise((resolve, reject) => {
       this.app.db
         .collection("users")
@@ -45,6 +47,7 @@ export default class User {
   }
 
   search(q = "") {
+    // eslint-disable-next-line no-undef
     return new Promise((resolve, reject) => {
       const regex = new RegExp(q, "i");
 
@@ -73,6 +76,7 @@ export default class User {
     const email = _.get(user, "email", "");
     const password = _.get(user, "password", "");
 
+    // eslint-disable-next-line no-undef
     return new Promise((resolve, reject) => {
       if (!password || !email || !isEmail(email)) {
         return reject({ message: "An error login." });
@@ -126,6 +130,7 @@ export default class User {
   load(id) {
     id = `${id}`;
 
+    // eslint-disable-next-line no-undef
     return new Promise((resolve, reject) => {
       // find in cache if found we return and dont nee to query db
 
@@ -254,6 +259,7 @@ export default class User {
 
     console.log("User:", user);
 
+    // eslint-disable-next-line no-undef
     return new Promise((resolve, reject) => {
       this.beforeSave(user, (err, user) => {
         console.log("After validation: ", err, user);

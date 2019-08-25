@@ -9,6 +9,7 @@ export default class Message {
   }
 
   getChannelMessages(channelId, limit = 50, offset = 0) {
+    // eslint-disable-next-line no-undef
     return new Promise((resolve, reject) => {
       channelId = new ObjectID(channelId);
 
@@ -63,6 +64,7 @@ export default class Message {
     });
   }
   create(obj) {
+    // eslint-disable-next-line no-undef
     return new Promise((resolve, reject) => {
       let id = _.get(obj, "_id", null);
       id = _.toString(id);

@@ -148,8 +148,8 @@ export default class Connection {
               });
             });
         }
-
         break;
+
       case "create_channel":
         let channel = payload;
 

@@ -11,6 +11,7 @@ export default class Channel {
   }
 
   aggregate(q) {
+    // eslint-disable-next-line no-undef
     return new Promise((resolve, reject) => {
       this.app.db.collection("channels").aggregate(q, (err, results) => {
         return err ? reject(err) : resolve(results);
@@ -18,6 +19,7 @@ export default class Channel {
     });
   }
   find(q, options = {}) {
+    // eslint-disable-next-line no-undef
     return new Promise((resolve, reject) => {
       this.app.db
         .collection("channels")
@@ -28,6 +30,7 @@ export default class Channel {
     });
   }
   load(id) {
+    // eslint-disable-next-line no-undef
     return new Promise((resolve, reject) => {
       id = _.toString(id);
 
@@ -53,6 +56,7 @@ export default class Channel {
   }
 
   findById(id) {
+    // eslint-disable-next-line no-undef
     return new Promise((resolve, reject) => {
       this.app.db
         .collection("channels")
@@ -66,6 +70,7 @@ export default class Channel {
     });
   }
   create(obj) {
+    // eslint-disable-next-line no-undef
     return new Promise((resolve, reject) => {
       let id = toString(_.get(obj, "_id"));
 
