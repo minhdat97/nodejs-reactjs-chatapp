@@ -150,6 +150,7 @@ export default class Connection {
         }
         break;
 
+      // eslint-disable-next-line no-case-declarations
       case "create_channel":
         let channel = payload;
 
@@ -162,7 +163,7 @@ export default class Connection {
           //console.log("Succesful created new channel", typeof userId, chanelObject);
 
           // let send back to all members in this channel  with new channel  created
-          let memberConnections = [];
+          //let memberConnections = [];
 
           const memberIds = _.get(chanelObject, "members", []);
 
@@ -209,6 +210,7 @@ export default class Connection {
 
         break;
 
+      // eslint-disable-next-line no-case-declarations
       case "auth":
         const userTokenId = payload;
         let connection = this.connections.get(socketId);
