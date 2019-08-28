@@ -1,9 +1,9 @@
 version: '3'
 
 services:
-  #####################################
-  #    Setup node server
-  #####################################
+#####################################
+#    Setup node server
+#####################################
   server:
     build: ./server
     expose:
@@ -19,9 +19,9 @@ services:
       - ./server/src:/srv/app/fr-chatapp-server/src
     command: npm run dev
 
-  #####################################
-  #    Setup node client
-  #####################################
+#####################################
+#    Setup node client
+#####################################
   client:
     build: ./app
     enviroment:

@@ -11,6 +11,4 @@ RUN npm install
 
 COPY . /srv/app/fr-chat-app-server
 
-EXPOSE 3001
-
 CMD [ "npm", "run", "dev" ]

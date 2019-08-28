@@ -11,6 +11,4 @@ RUN npm install
 
 COPY . /srv/app/fr-chat-app-client
 
-EXPOSE 3000
-
 CMD [ "npm", "start" ]
