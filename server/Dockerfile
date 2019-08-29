@@ -5,7 +5,7 @@ RUN mkdir -p /srv/app/fr-chat-app-server
 WORKDIR /srv/app/fr-chat-app-server
 
 COPY package.json /srv/app/fr-chat-app-server
-COPY package-lock.json /srv/app/fr-chat-app-server
+# COPY package-lock.json /srv/app/fr-chat-app-server
 
 RUN if [ "$NODE_ENV" = "development" ]; \
 	then npm install;  \
