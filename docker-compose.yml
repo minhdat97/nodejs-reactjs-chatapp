@@ -8,7 +8,7 @@ services:
     build: ./server
     expose:
       - ${APP_SERVER_PORT}  
-    enviroment:
+    environment:
       API_HOST: ${API_HOST}
       APP_SERVER_PORT: ${APP_SERVER_PORT}
     env_file:
@@ -24,7 +24,7 @@ services:
 #####################################
   client:
     build: ./app
-    enviroment:
+    environment:
       - REACT_APP_PORT=${REACT_APP_PORT}
     env_file:
       - .env

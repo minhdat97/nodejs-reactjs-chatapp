@@ -7,7 +7,10 @@ WORKDIR /srv/app/fr-chat-app-server
 COPY package.json /srv/app/fr-chat-app-server
 COPY package-lock.json /srv/app/fr-chat-app-server
 
-RUN npm install
+RUN if [ "$NODE_ENV" = "development" ]; \
+	then npm install;  \
+	else npm install --only=production; \
+	fi
 
 COPY . /srv/app/fr-chat-app-server
 
