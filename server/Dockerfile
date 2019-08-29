@@ -1,7 +1,9 @@
 FROM node:8.7.0-alpine
 
 # Create app directory and use it as working directory
-RUN mkdir -p /srv/app/fr-chat-app-server
+RUN mkdir -p /srv/app/fr-chat-app-server \
+	apk add --update \
+	libc6-compat
 WORKDIR /srv/app/fr-chat-app-server
 
 COPY package.json /srv/app/fr-chat-app-server
