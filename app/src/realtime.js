@@ -186,7 +186,7 @@ export default class Realtime {
     this.ws = ws;
 
     ws.onopen = () => {
-      //console.log("You are connected");
+      console.log("You are connected");
 
       // let tell to the server who are you ?
 
