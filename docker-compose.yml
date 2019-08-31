@@ -1,13 +1,13 @@
-version: '3'
+version: "3"
 
 services:
-#####################################
-#    Setup node server
-#####################################
+  #####################################
+  #    Setup node server
+  #####################################
   server:
     build: ./server
     expose:
-      - ${APP_SERVER_PORT}  
+      - ${APP_SERVER_PORT}
     environment:
       API_HOST: ${API_HOST}
       APP_SERVER_PORT: ${APP_SERVER_PORT}
@@ -19,9 +19,9 @@ services:
       - ./server/src:/srv/app/fr-chatapp-server/src
     command: npm run dev
 
-#####################################
-#    Setup node client
-#####################################
+  #####################################
+  #    Setup node client
+  #####################################
   client:
     build: ./app
     environment:
@@ -38,11 +38,18 @@ services:
     links:
       - server
     command: npm run start
-#####################################
-#    Setup node database
-#####################################
+  #####################################
+  #    Setup node database
+  #####################################
   mongo:
     container_name: mongo
     image: mongo
     ports:
       - "27017:27017"
+    volumes:
+      - db-data:/data/db
+      - mongo-config:/data/configdb
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    command: mongod --smallfiles --logpath=/dev/null # --quiet
