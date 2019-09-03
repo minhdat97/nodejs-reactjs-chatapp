@@ -13,4 +13,4 @@ RUN npm i --only=production
 
 COPY . /srv/app/fr-chat-app-server
 
-CMD [ "node", "./dist/index.js" ]
+CMD [ "node", "./src/index.js" ]
