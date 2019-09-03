@@ -9,10 +9,7 @@ EXPOSE 3001
 COPY package.json /srv/app/fr-chat-app-server
 # COPY package-lock.json /srv/app/fr-chat-app-server
 
-RUN if [ "$NODE_ENV" = "development" ]; \
-	then npm install;  \
-	else npm install --only=production; \
-	fi
+RUN npm ci --only=production
 
 COPY . /srv/app/fr-chat-app-server
 
