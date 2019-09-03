@@ -20,7 +20,7 @@ services:
       - ./server/src:/srv/app/fr-chatapp-server/src
     links:
       - mongo
-    depends_on: 
+    depends_on:
       - mongo
     command: npm run dev
 
@@ -52,6 +52,3 @@ services:
     ports:
       - "27017:27017"
     restart: always
-    environment:
-      - MONGO_DATA_DIR=/data/db
-      - MONGO_LOG_DIR=/dev/null
