@@ -9,7 +9,7 @@ EXPOSE 3001
 COPY package.json /srv/app/fr-chat-app-server
 # COPY package-lock.json /srv/app/fr-chat-app-server
 
-RUN npm ci --only=production
+RUN npm i --only=production
 
 COPY . /srv/app/fr-chat-app-server
 
