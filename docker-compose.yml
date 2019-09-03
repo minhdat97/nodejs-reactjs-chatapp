@@ -21,7 +21,7 @@ services:
       - mongo
     depends_on:
       - mongo
-    command: npm run dev
+    command: node index.js
 
   #####################################
   #    Setup node client
