@@ -15,6 +15,7 @@ services:
       - .env
     ports:
       - ${APP_SERVER_PORT}:${APP_SERVER_PORT}
+    restart: always
     volumes:
       - ./server/src:/srv/app/fr-chatapp-server/src
     links:
