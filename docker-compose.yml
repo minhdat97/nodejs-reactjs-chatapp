@@ -20,6 +20,8 @@ services:
       - ./server/src:/srv/app/fr-chatapp-server/src
     links:
       - mongo
+    depends_on: 
+      - mongo
     command: npm run dev
 
   #####################################
