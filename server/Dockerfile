@@ -13,4 +13,4 @@ RUN npm i --only=production
 
 COPY . /srv/app/fr-chat-app-server
 
-CMD [ "npm", "run", "start" ]
+CMD [ "nodemon", "./src/index.js" ]
