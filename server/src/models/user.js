@@ -239,7 +239,6 @@ export default class User {
         console.log("error");
         return callback({ message: "Email is already exist" }, null);
       }
-      console.log("here");
       // return callback with succes checked.
       const password = _.get(user, "password");
       const hashPassword = bcrypt.hashSync(password, saltRound);
