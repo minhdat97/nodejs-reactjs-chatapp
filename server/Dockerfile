@@ -13,6 +13,6 @@ COPY . /srv/app/fr-chat-app-server
 
 EXPOSE 3001
 
-RUN npm install -g nodemon // install nodemon for changes on the fly
+RUN npm install -g nodemon
 
 CMD [ "nodemon", "./src/index.js" ]
