@@ -267,7 +267,7 @@ export default class Connection {
     this.app.wss.on("connection", ws => {
       const socketId = new ObjectID().toString();
 
-      //console.log("Somone connected to the server via socket.", socketId)
+      console.log("Somone connected to the server via socket.", socketId)
 
       const clientConnection = {
         _id: `${socketId}`,

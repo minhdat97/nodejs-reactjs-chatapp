@@ -235,6 +235,7 @@ export default class User {
     const email = _.toLower(_.trim(_.get(user, "email", "")));
 
     this.app.db.collection("users").findOne({ email: email }, (err, result) => {
+      console.log("here");
       if (err || result) {
         return callback({ message: "Email is already exist" }, null);
       }
