@@ -1,4 +1,4 @@
-FROM node:8.7.0-alpine
+FROM node:10-alpine
 
 # Create app directory and use it as working directory
 RUN mkdir -p /srv/app/fr-chat-app-client
