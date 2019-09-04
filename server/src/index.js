@@ -40,6 +40,7 @@ app.use("/", express.static(wwwPath));
 new Database()
   .connect()
   .then(db => {
+    console.log("db", db);
     console.log("Successful connected to database.");
 
     app.db = db;

@@ -1,6 +1,6 @@
 import { MongoClient } from "mongodb";
 
-const URL = "mongodb://mongo:27017/chatapp?authSource=admin";
+const URL = "mongodb://mongo:27017/chatapp";
 
 export default class Database {
   connect() {
