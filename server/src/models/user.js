@@ -1,6 +1,6 @@
 import _ from "lodash";
 import { isEmail } from "../helper";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import { ObjectID } from "mongodb";
 import { OrderedMap } from "immutable";
 
