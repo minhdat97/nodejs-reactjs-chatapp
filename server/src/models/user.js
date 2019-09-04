@@ -233,6 +233,7 @@ export default class User {
 
     // check email is exist in db or not
     const email = _.toLower(_.trim(_.get(user, "email", "")));
+    console.log("email", email);
 
     this.app.db.collection("users").findOne({ email: email }, (err, result) => {
       if (err || result) {
