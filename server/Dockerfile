@@ -2,6 +2,7 @@ FROM node:10-alpine
 
 # Create app directory and use it as working directory
 RUN mkdir -p /srv/app/fr-chat-app-server && apk update && apk add libc6-compat	
+RUN [ "apt-get", "install", "-y", "build-essential", "python" ]
 WORKDIR /srv/app/fr-chat-app-server
 
 COPY package.json /srv/app/fr-chat-app-server
