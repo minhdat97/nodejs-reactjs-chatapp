@@ -235,11 +235,11 @@ export default class User {
     const email = _.toLower(_.trim(_.get(user, "email", "")));
 
     this.app.db.collection("users").findOne({ email: email }, (err, result) => {
-      console.log("here");
       if (err || result) {
+        console.log("error");
         return callback({ message: "Email is already exist" }, null);
       }
-
+      console.log("here");
       // return callback with succes checked.
       const password = _.get(user, "password");
       const hashPassword = bcrypt.hashSync(password, saltRound);
