@@ -251,6 +251,8 @@ export default class User {
         created: new Date()
       };
 
+      console.log("userFormatted", userFormatted);
+
       return callback(null, userFormatted);
     });
   }
