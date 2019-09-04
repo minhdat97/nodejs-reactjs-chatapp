@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM node:8.7.0-alpine
 
 # Create app directory and use it as working directory
 RUN mkdir -p /srv/app/fr-chat-app-server && apk update && apk add libc6-compat	
