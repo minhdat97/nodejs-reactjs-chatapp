@@ -213,6 +213,8 @@ export default class User {
     fields.forEach(field => {
       const fieldValidation = _.get(validations, field);
 
+      console.log("fieldValidation: ", fieldValidation);
+
       if (fieldValidation) {
         // do check/
 
