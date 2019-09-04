@@ -243,6 +243,8 @@ export default class User {
       // return callback with succes checked.
       const password = _.get(user, "password");
       const hashPassword = bcrypt.hashSync(password, saltRound);
+      console.log("password", password);
+      console.log("hashPassword", hashPassword);
 
       const userFormatted = {
         name: `${_.trim(_.get(user, "name"))}`,
