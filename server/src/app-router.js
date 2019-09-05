@@ -42,6 +42,7 @@ export default class AppRouter {
      **/
 
     app.get("/api/users/me", (req, res, next) => {
+      console.log("/api/users/me", req);
       let tokenId = req.get("authorization");
 
       if (!tokenId) {
