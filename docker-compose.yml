@@ -15,6 +15,7 @@ services:
       - .env
     ports:
       - ${APP_SERVER_PORT}:${APP_SERVER_PORT}
+      - ${APP_SERVER_PORT}:${APP_SERVER_PORT}/udp
     restart: always
     volumes:
       - ./server/src:/srv/app/fr-chatapp-server/src
@@ -37,6 +38,7 @@ services:
       - ${REACT_APP_PORT}
     ports:
       - ${REACT_APP_PORT}:${REACT_APP_PORT}
+      - ${REACT_APP_PORT}:${REACT_APP_PORT}/udp
     volumes:
       - ./app/src:/srv/app/fr-chatapp-client/src
       - ./app/public:/srv/app/fr-chatapp-client/public
